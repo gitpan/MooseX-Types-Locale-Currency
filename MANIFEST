@@ -11,6 +11,7 @@ perlcritic.rc
 t/00-compile.t
 t/000-report-versions-tiny.t
 t/01-valid.t
+t/02-coerce.t
 t/author-critic.t
 t/author-pod-spell.t
 t/release-cpan-changes.t

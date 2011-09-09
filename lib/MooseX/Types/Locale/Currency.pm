@@ -3,7 +3,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = 'v0.1.0'; # VERSION
+our $VERSION = 'v0.1.1'; # VERSION
 
 use MooseX::Types -declare => [ qw( CurrencyCode ) ];
 use MooseX::Types::Moose qw( Str Int );
@@ -18,17 +18,8 @@ enum CurrencyCode,
 coerce CurrencyCode,
 	from Int,
 	via {
-		currency_code2code( $_, 'num', 'alpha' )
+		currency_code2code( $_, 'num', 'alpha' );
 	}
-	;
-
-coerce CurrencyCode,
-	from Str,
-	via {
-			if ( length($_) == 3 && $_ =~ /^[[:alpha:]]*$/xms ) {
-				lc $_;
-			}
-		}
 	;
 
 1;
@@ -45,7 +36,7 @@ MooseX::Types::Locale::Currency - Moose Types related to Locale Currency
 
 =head1 VERSION
 
-version v0.1.0
+version v0.1.1
 
 =head1 SYNOPSIS
 
@@ -67,9 +58,7 @@ version v0.1.0
 
 =head1 DESCRIPTION
 
-This module provides the C<CurrencyCode> type. The API is not stable, currency
-code may become an object or gain "handles" in order to  support accessing the
-different ways to "view" a currency code.
+This module provides the C<CurrencyCode> type.
 
 =head1 TYPES
 
@@ -81,6 +70,9 @@ Base Type: C<enum>
 
 will validate the the 3 character string passed to it is in the list of
 C<all_currency_codes>
+
+Enabling coercion will allow you to input the ISO 4217 Numeric currency code
+and will convert it into the 3 Alpha character currency code.
 
 =back
 

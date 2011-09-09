@@ -30,5 +30,6 @@ requires:
   warnings: 0
 resources:
   bugtracker: https://github.com/xenoterracide/MooseX-Types-Locale-Currency/issues
+  homepage: http://search.cpan.org/dist/MooseX-Types-Locale-Currency/
   repository: git://github.com/xenoterracide/MooseX-Types-Locale-Currency.git
-version: v0.1.0
+version: v0.1.1

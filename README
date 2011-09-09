@@ -2,7 +2,7 @@ NAME
     MooseX::Types::Locale::Currency - Moose Types related to Locale Currency
 
 VERSION
-    version v0.1.0
+    version v0.1.1
 
 SYNOPSIS
             {
@@ -22,9 +22,7 @@ SYNOPSIS
             });
 
 DESCRIPTION
-    This module provides the "CurrencyCode" type. The API is not stable,
-    currency code may become an object or gain "handles" in order to support
-    accessing the different ways to "view" a currency code.
+    This module provides the "CurrencyCode" type.
 
 TYPES
     *   "CurrencyCode"
@@ -33,6 +31,10 @@ TYPES
 
         will validate the the 3 character string passed to it is in the list
         of "all_currency_codes"
+
+        Enabling coercion will allow you to input the ISO 4217 Numeric
+        currency code and will convert it into the 3 Alpha character
+        currency code.
 
 SEE ALSO
     *   Locale::Currency

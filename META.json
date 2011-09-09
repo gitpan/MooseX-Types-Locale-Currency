@@ -45,17 +45,18 @@
          }
       }
    },
-   "release_status" : "testing",
+   "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
          "web" : "https://github.com/xenoterracide/MooseX-Types-Locale-Currency/issues"
       },
+      "homepage" : "http://search.cpan.org/dist/MooseX-Types-Locale-Currency/",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/xenoterracide/MooseX-Types-Locale-Currency.git",
          "web" : "https://github.com/xenoterracide/MooseX-Types-Locale-Currency"
       }
    },
-   "version" : "v0.1.0"
+   "version" : "v0.1.1"
 }
 
