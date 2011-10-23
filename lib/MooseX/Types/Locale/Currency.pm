@@ -3,7 +3,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = 'v0.1.1'; # VERSION
+our $VERSION = '0.001002'; # VERSION
 
 use MooseX::Types -declare => [ qw( CurrencyCode ) ];
 use MooseX::Types::Moose qw( Str Int );
@@ -36,7 +36,7 @@ MooseX::Types::Locale::Currency - Moose Types related to Locale Currency
 
 =head1 VERSION
 
-version v0.1.1
+version 0.001002
 
 =head1 SYNOPSIS
 
