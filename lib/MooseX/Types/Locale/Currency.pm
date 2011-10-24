@@ -3,13 +3,13 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '0.001002'; # VERSION
+our $VERSION = '0.001003'; # VERSION
 
 use MooseX::Types -declare => [ qw( CurrencyCode ) ];
 use MooseX::Types::Moose qw( Str Int );
 use namespace::autoclean;
 
-use Locale::Currency;
+use Locale::Currency 3;
 
 enum CurrencyCode,
 	[ all_currency_codes ]
@@ -36,7 +36,7 @@ MooseX::Types::Locale::Currency - Moose Types related to Locale Currency
 
 =head1 VERSION
 
-version 0.001002
+version 0.001003
 
 =head1 SYNOPSIS
 

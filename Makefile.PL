@@ -26,14 +26,14 @@ my %WriteMakefileArgs = (
   "LICENSE" => "artistic_2",
   "NAME" => "MooseX::Types::Locale::Currency",
   "PREREQ_PM" => {
-    "Locale::Currency" => 0,
+    "Locale::Currency" => 3,
     "MooseX::Types" => 0,
     "MooseX::Types::Moose" => 0,
     "namespace::autoclean" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.001002",
+  "VERSION" => "0.001003",
   "test" => {
     "TESTS" => "t/*.t"
   }

@@ -21,7 +21,7 @@ no_index:
   file:
     - perlcritic.rc
 requires:
-  Locale::Currency: 0
+  Locale::Currency: 3
   MooseX::Types: 0
   MooseX::Types::Moose: 0
   namespace::autoclean: 0
@@ -32,4 +32,4 @@ resources:
   bugtracker: https://github.com/xenoterracide/MooseX-Types-Locale-Currency/issues
   homepage: http://search.cpan.org/dist/MooseX-Types-Locale-Currency/
   repository: git://github.com/xenoterracide/MooseX-Types-Locale-Currency.git
-version: 0.001002
+version: 0.001003
