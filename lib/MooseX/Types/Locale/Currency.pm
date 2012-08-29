@@ -3,22 +3,23 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '0.001003'; # VERSION
+our $VERSION = '0.001004'; # VERSION
 
 use MooseX::Types -declare => [ qw( CurrencyCode ) ];
 use MooseX::Types::Moose qw( Str Int );
+use Class::Load 0.20 qw( load_class );
 use namespace::autoclean;
 
-use Locale::Currency 3;
-
-enum CurrencyCode,
-	[ all_currency_codes ]
-	;
+enum CurrencyCode, [
+	load_class('Locale::Currency')
+	&& Locale::Currency::all_currency_codes()
+];
 
 coerce CurrencyCode,
 	from Int,
 	via {
-		currency_code2code( $_, 'num', 'alpha' );
+		load_class('Locale::Currency');
+		Locale::Currency::currency_code2code( $_, 'num', 'alpha' );
 	}
 	;
 
@@ -26,8 +27,8 @@ coerce CurrencyCode,
 
 # ABSTRACT: Moose Types related to Locale Currency
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -36,7 +37,7 @@ MooseX::Types::Locale::Currency - Moose Types related to Locale Currency
 
 =head1 VERSION
 
-version 0.001003
+version 0.001004
 
 =head1 SYNOPSIS
 
@@ -106,4 +107,3 @@ This is free software, licensed under:
   The Artistic License 2.0 (GPL Compatible)
 
 =cut
-

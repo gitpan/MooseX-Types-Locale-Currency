@@ -12,10 +12,10 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Moose Types related to Locale Currency",
   "AUTHOR" => "Caleb Cushing <xenoterracide\@gmail.com>",
   "BUILD_REQUIRES" => {
-    "English" => 0,
     "File::Find" => 0,
     "File::Temp" => 0,
     "Moose" => 0,
+    "Test::Fatal" => 0,
     "Test::More" => "0.88"
   },
   "CONFIGURE_REQUIRES" => {
@@ -26,6 +26,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "artistic_2",
   "NAME" => "MooseX::Types::Locale::Currency",
   "PREREQ_PM" => {
+    "Class::Load" => "0.20",
     "Locale::Currency" => 3,
     "MooseX::Types" => 0,
     "MooseX::Types::Moose" => 0,
@@ -33,7 +34,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.001003",
+  "VERSION" => "0.001004",
   "test" => {
     "TESTS" => "t/*.t"
   }

@@ -3,15 +3,15 @@ abstract: 'Moose Types related to Locale Currency'
 author:
   - 'Caleb Cushing <xenoterracide@gmail.com>'
 build_requires:
-  English: 0
   File::Find: 0
   File::Temp: 0
   Moose: 0
+  Test::Fatal: 0
   Test::More: 0.88
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300002, CPAN::Meta::Converter version 2.112621'
+generated_by: 'Dist::Zilla version 4.300021, CPAN::Meta::Converter version 2.120921'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -21,6 +21,7 @@ no_index:
   file:
     - perlcritic.rc
 requires:
+  Class::Load: 0.20
   Locale::Currency: 3
   MooseX::Types: 0
   MooseX::Types::Moose: 0
@@ -32,4 +33,4 @@ resources:
   bugtracker: https://github.com/xenoterracide/MooseX-Types-Locale-Currency/issues
   homepage: http://search.cpan.org/dist/MooseX-Types-Locale-Currency/
   repository: git://github.com/xenoterracide/MooseX-Types-Locale-Currency.git
-version: 0.001003
+version: 0.001004

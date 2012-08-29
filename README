@@ -2,7 +2,7 @@ NAME
     MooseX::Types::Locale::Currency - Moose Types related to Locale Currency
 
 VERSION
-    version 0.001003
+    version 0.001004
 
 SYNOPSIS
             {
