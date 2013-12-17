@@ -3,22 +3,21 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '0.001004'; # VERSION
+our $VERSION = '0.001005'; # VERSION
 
 use MooseX::Types -declare => [ qw( CurrencyCode ) ];
 use MooseX::Types::Moose qw( Str Int );
-use Class::Load 0.20 qw( load_class );
-use namespace::autoclean;
+use Module::Runtime 'use_module';
 
 enum CurrencyCode, [
-	load_class('Locale::Currency')
+	use_module('Locale::Currency', 3 )
 	&& Locale::Currency::all_currency_codes()
 ];
 
 coerce CurrencyCode,
 	from Int,
 	via {
-		load_class('Locale::Currency');
+		use_module('Locale::Currency', 3 );
 		Locale::Currency::currency_code2code( $_, 'num', 'alpha' );
 	}
 	;
@@ -31,13 +30,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 MooseX::Types::Locale::Currency - Moose Types related to Locale Currency
 
 =head1 VERSION
 
-version 0.001004
+version 0.001005
 
 =head1 SYNOPSIS
 
@@ -88,7 +89,7 @@ and will convert it into the 3 Alpha character currency code.
 =head1 BUGS
 
 Please report any bugs or feature requests on the bugtracker website
-https://github.com/xenoterracide/MooseX-Types-Locale-Currency/issues
+https://github.com/xenoterracide/moosex-types-locale-currency/issues
 
 When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired
@@ -100,7 +101,7 @@ Caleb Cushing <xenoterracide@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2011 by Caleb Cushing.
+This software is Copyright (c) 2013 by Caleb Cushing.
 
 This is free software, licensed under:
 

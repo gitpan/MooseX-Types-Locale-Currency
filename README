@@ -2,7 +2,7 @@ NAME
     MooseX::Types::Locale::Currency - Moose Types related to Locale Currency
 
 VERSION
-    version 0.001004
+    version 0.001005
 
 SYNOPSIS
             {
@@ -41,7 +41,7 @@ SEE ALSO
 
 BUGS
     Please report any bugs or feature requests on the bugtracker website
-    https://github.com/xenoterracide/MooseX-Types-Locale-Currency/issues
+    https://github.com/xenoterracide/moosex-types-locale-currency/issues
 
     When submitting a bug or request, please include a test-file or a patch
     to an existing test-file that illustrates the bug or desired feature.
@@ -50,7 +50,7 @@ AUTHOR
     Caleb Cushing <xenoterracide@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is Copyright (c) 2011 by Caleb Cushing.
+    This software is Copyright (c) 2013 by Caleb Cushing.
 
     This is free software, licensed under:
 
